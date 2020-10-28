@@ -1,22 +1,22 @@
 {
-  "name": "sdistro-element-theme",
-  "version": "0.2.9",
+  "name": "@seemusic/sdistro-element-theme",
+  "version": "0.3.0",
   "private": false,
-  "description": "星球发行自定义 ElementUI 皮肤",
-  "author": "cuiguojie@me.com",
+  "description": "星球发行前台 自定义 ElementUI 皮肤",
+  "author": "cuiguojie@kanjian.com",
   "scripts": {
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
   },
   "main": "src/index.scss",
   "dependencies": {
-    "@storybook/vue": "^5.3.13"
+    "@storybook/vue": "6.0.21"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.13",
-    "@storybook/addon-knobs": "^5.3.13",
-    "@storybook/addon-links": "^5.3.13",
-    "@storybook/addon-notes": "^5.3.13",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-knobs": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/addon-notes": "^5.3.21",
     "@vue/cli-plugin-babel": "^4.2.2",
     "@vue/cli-plugin-eslint": "^4.2.2",
     "@vue/cli-service": "^4.2.2",
@@ -31,16 +31,16 @@
     "sass-loader": "^8.0.2",
     "vue": "^2.6.11",
     "vue-cli-plugin-element": "^1.0.1",
-    "vue-cli-plugin-storybook": "~1.2.0",
+    "vue-cli-plugin-storybook": "~1.2.2",
     "vue-template-compiler": "^2.6.11"
   },
   "bugs": {
-    "url": "https://github.com/cuiguojie/sdistro-element-theme/issues"
+    "url": "https://github.com/SeeMusic/sdistro-element-theme/issues"
   },
-  "homepage": "https://github.com/cuiguojie/sdistro-element-theme#readme",
-  "license": "ISC",
+  "homepage": "https://github.com/SeeMusic/sdistro-element-theme",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cuiguojie/sdistro-element-theme.git"
+    "url": "git+https://github.com/SeeMusic/sdistro-element-theme.git"
   }
 }
