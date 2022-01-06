@@ -3,8 +3,10 @@
 自定义 ElementUI 样式。仅提供 SCSS 文件及相关资源；使用 `storybook` 做控件样式预览
 
 目前版本依赖：
-* `ElementUI` 2.13.2
-* `@storybook/vue` 6.0.21（目前 6.0.27 升级会编译失败）
+* `ElementUI` 2.4.5+
+* `@storybook/vue` 6.4.9
+
+> ElementUI 2.15.6 有一些破坏式的 DOM 结构修改，此处直接做了额外的覆写。
 
 ## 本地预览
 

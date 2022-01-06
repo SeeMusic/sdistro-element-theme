@@ -1,22 +1,38 @@
+// Element 2.15.6 修改了 Table 的 DOM 结构和样式选择器，导致样式出错。
+// 为了兼容老版本，此处采用冗余选择器的方法。
+
 .el-table {
   color: #333;
+
+  .cell {
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 24px;
+    font-size: 14px;
+  }
 
   thead {
     color: #333;
   }
 
   th,
-  td {
+  td,
+  .el-table__cell {
     padding: 8px 0;
     vertical-align: top;
   }
 
   th.is-leaf,
-  td {
+  td,
+  th.el-table__cell.is-leaf,
+  td.el-table__cell {
+    // 2.15.2 修改 DOM 结构，使用后两行
     border-bottom: 1px solid #EEE;
   }
 
-  th {
+
+  th,
+  th.el-table__cell {
     background: #333;
     color: #FFF;
 
@@ -30,18 +46,12 @@
       font-weight: 400;
     }
 
-    // 2.13.0 加入了 padding-left: 10px ; padding-right: 10px 的默认样式，需要覆盖
+    // 2.13.0
+    // 加入了表头部分 padding-left: 10px ; padding-right: 10px 的默认样式，需要覆盖
     & > .cell {
       padding-left: 15px;
       padding-right: 15px;
     }
-  }
-
-  .cell {
-    padding-left: 15px;
-    padding-right: 15px;
-    line-height: 24px;
-    font-size: 14px;
   }
 }
 
@@ -83,4 +93,8 @@
 
 .el-table .el-table__expanded-cell[class*=cell] {
   padding: 24px;
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+
 }

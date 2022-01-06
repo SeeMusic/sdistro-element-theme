@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import Vue from 'vue';
 import {
   Aside,
@@ -83,9 +82,6 @@ Vue.use(Upload);
 
 Vue.use(Loading.directive);
 
-// 不可以同时使用Vue.user(Message) 和 Vue.prototype.$message = Message
-// 否则会多次初始化，在调试工具里的表现是多个Root
-// 同理还有MessageBox
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;

@@ -1,3 +1,5 @@
+$RadioButtonBorderColor: #DDD;
+
 .el-radio {
   margin-right: 40px;
   line-height: 24px;
@@ -19,6 +21,10 @@
     height: 8px;
     background: $blue;
   }
+
+  &:hover {
+    border-color: $blue;
+  }
 }
 
 .el-radio__input.is-checked + .el-radio__label {
@@ -35,7 +41,7 @@
   line-height: 30px;
   font-weight: 400;
   color: #333;
-  border: 1px solid #DDD;
+  border: 1px solid $RadioButtonBorderColor;
   border-left: 0;
   transition: none;
 
@@ -44,14 +50,22 @@
   }
 }
 
+// checked
 .el-radio-button__orig-radio:checked + .el-radio-button__inner {
   background: $blue;
   border-color: $blue;
   box-shadow: none;
 }
 
+// checked && disabled
+.el-radio-button__orig-radio:disabled + .el-radio-button__inner,
+.el-radio-button__orig-radio:disabled:checked + .el-radio-button__inner {
+  border-color: $RadioButtonBorderColor;
+}
+
+// first
 .el-radio-button:first-child .el-radio-button__inner {
-  border-left: 1px solid #DDD;
+  border-left: 1px solid $RadioButtonBorderColor;
 }
 
 .el-radio-group.option-group--block {
